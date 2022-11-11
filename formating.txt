@@ -1,0 +1,30 @@
+const a =[32323,43434,5555555,6643434]
+const formatCash = n => {
+ 
+  if (n < 1e3) return n;
+  if (n >= 1e3 && n < 1e6) return +(n / 1e3).toFixed(1) + "K+";
+  if (n >= 1e6 && n < 1e9) return +(n / 1e6).toFixed(1) + "M+";
+  if (n >= 1e9 && n < 1e12) return +(n / 1e9).toFixed(1) + "B+";
+  if (n >= 1e12) return +(n / 1e12).toFixed(1) + "T";
+
+};
+
+for (let n=0;n<a.length;n++ )
+  {
+console.log(formatCash(a[n]));
+  }
+
+
+Output:-
+32.3K+
+43.4K+
+5.6M+
+6.6M+
+
+
+1e3= 1000
+2e4=20000
+
+The toFixed() method converts a number to a string.
+
+The toFixed() method rounds the string to a specified number of decimals.
